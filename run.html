@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เลือกสวนออกกำลังกาย</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url(https://plus.unsplash.com/premium_photo-1679938885972-180ed418f466?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center/cover;
+}
+
+/* overlay มืดบางๆ */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* container */
+.container {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* กล่องสนาม */
+.court-box {
+    width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.court-title {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,255,100,0.6);
+  background: white;
+  color: #fb93e9;
+
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.unavailable {
+    color: #ff4d4d;
+}
+
+.status.available {
+    color: #00ff99;
+}
+
+/* ปุ่ม */
+.btn-book {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #fb93e9;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,140,0,0.8);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>เลือกสวนออกกำลังกาย</h1>
+
+    <div class="court-box">
+        <div class="court-title">ลู่วิ่งสนามกรีฑา (มกช.สุโขทัย)</div>
+        <div class="status available">สถานะ: พร้อมใช้งาน</div>
+        <button class="btn-book">จองสนาม</button>
+    </div>
+
+</div>
+
+</body>
+</html>

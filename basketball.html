@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เลือกสนามบาสเกตบอล</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://images.unsplash.com/photo-1546519638-68e109498ffc') no-repeat center center/cover;
+}
+
+/* container */
+.container {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* กล่องสนาม */
+.court-box {
+    width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.court-title {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.unavailable {
+    color: #ff4d4d;
+}
+
+.status.available {
+    color: #00ff99;
+}
+
+/* ปุ่ม */
+.btn-book {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff8c00, #ff4d00);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,140,0,0.8);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1> เลือกสนามบาสเกตบอล</h1>
+
+    <div class="court-box">
+        <div class="court-title">สนามบาสเกตบอล 2500 ที่นั่ง (มกช.สุโขทัย)</div>
+        <div class="status unavailable">สถานะ: ไม่พร้อมใช้งาน</div>
+        <button class="btn-book">จองสนาม</button>
+    </div>
+
+    <div class="court-box">
+        <div class="court-title">สนามบาสเกตบอล โดมฟ้า (มกช.สุโขทัย)</div>
+        <div class="status unavailable">สถานะ: ไม่พร้อมใช้งาน</div>
+        <button class="btn-book">จองสนาม</button>
+    </div>
+
+</div>
+
+</body>
+</html>

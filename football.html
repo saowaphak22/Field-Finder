@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เลือกสนามฟุตบอล</title>
+<style>
+body {
+  font-family: Segoe UI;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018');
+    background-size: cover;
+    background-position: center;
+    color:white;
+    min-height:100vh;
+}
+
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.field-option {
+  width: 70%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: translateY(-10px) scale(1.02);
+
+}
+
+button {
+  background: white;
+  color: #003300;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 255, 100, 0.6);
+  background: #00cc66;
+  color: white;
+}
+.status {
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.available {
+    color: #00ff88;
+}
+
+.unavailable {
+    color: #ff4d4d;
+}
+
+.maintenance {
+    color: #ffd700;
+}
+</style>
+</head>
+<body>
+
+<h2>เลือกสนามฟุตบอล</h2>
+
+<div class="field-option">
+  <h3>สนามฟุตบอล1 มหาวิทยาลัยการกีฬาแห่งชาติ วิทยาเขตสุโขทัย (มกช.สุโขทัย)</h3>
+  <p>ขนาด 11 คน</p>
+  <p class="status available">สถานะ: พร้อมใช้งาน</p>
+  <button>จองสนาม</button>
+</div>
+
+<div class="field-option">
+  <h3>สนามฟุตบอล2 มหาวิทยาลัยการกีฬาแห่งชาติ วิทยาเขตสุโขทัย (มกช.สุโขทัย)</h3>
+  <p>ขนาด 11 คน</p>
+  <p class="status unavailable">สถานะ: ไม่พร้อมใช้งาน</p>
+  <button>จองสนาม</button>
+</div>
+
+</body>
+</html>

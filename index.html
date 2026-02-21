@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Booking</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018');
+    background-size: cover;
+    background-position: center;
+    color:white;
+    min-height:100vh;
+}
+
+/* ===== Navbar ===== */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.9);
+    border-bottom:2px solid #1db954;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#1db954;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+}
+
+.menu div{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu div:hover{
+    color:#1db954;
+}
+
+/* ===== Search Section ===== */
+.search-section{
+    text-align:center;
+    margin:40px 0;
+}
+
+.search-section input{
+    width:60%;
+    padding:12px;
+    border-radius:30px;
+    border:none;
+    outline:none;
+    background:#111;
+    color:white;
+    border:1px solid #1db954;
+}
+
+.search-section input:focus{
+    box-shadow:0 0 10px #1db954;
+}
+
+/* ===== Field Cards ===== */
+.fields{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+    padding:0 40px 40px 40px;
+}
+
+.field-card{
+    background:rgba(0,0,0,0.85);
+    border:1px solid #1db954;
+    border-radius:15px;
+    padding:20px;
+    transition:0.3s;
+}
+
+.field-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 15px #1db954;
+}
+
+.field-card h3{
+    color:#1db954;
+    margin-bottom:10px;
+}
+
+.status{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.ready{ color:#1db954; }
+.full{ color:red; }
+.maintenance{ color:gold; }
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#1db954;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#17a44a;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    .search-section input{
+        width:90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo"> Field Finder</div>
+    <div class="menu">
+        <div>หน้าหลัก</div>
+        <div>การจองของฉัน</div>
+        <div>ติดต่อ</div>
+        <div> โปรไฟล์</div>
+    </div>
+</div>
+
+<div class="search-section">
+    <h2 style="color:#1db954; margin-bottom:15px;">ค้นหาสนามกีฬา</h2>
+    <input type="text" placeholder="ค้นหาประเภทสนาม เช่น ฟุตบอล, บาสเกตบอล...">
+</div>
+
+<div class="fields">
+
+<a href="Football.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>ฟุตบอล</h3>
+    <div class="status ready">สถานะ: พร้อมใช้งาน</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="basketball.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>บาสเกตบอล</h3>
+    <div class="status full">สถานะ: สนามเต็ม</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="futsal.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>ฟุตซอล</h3>
+    <div class="status maintenance">สถานะ: ปรับปรุง</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="voleyball.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>วอลเลย์บอล</h3>
+    <div class="status ready">สถานะ: พร้อมใช้งาน</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="badminton.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>แบดมินตัน</h3>
+    <div class="status full">สถานะ: สนามเต็ม</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="run.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>สวนออกกำลังกาย</h3>
+    <div class="status ready">สถานะ: พร้อมใช้งาน</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="tennis.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>เทนนิส</h3>
+    <div class="status ready">สถานะ: พร้อมใช้งาน</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="table-tennis.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>สนามเทเบิลเทนนิส</h3>
+    <div class="status  maintenance">สถานะ: ปรับปรุง</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="petanque.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>สนามเปตอง</h3>
+    <div class="status maintenance ">สถานะ: ปรับปรุง</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+<a href="swim.html" style="text-decoration: none; color: inherit;">
+  <div class="field-card">
+    <h3>สระว่ายน้ำ</h3>
+    <div class="status ready ">สถานะ: พร้อมใช้งาน</div>
+    <button>ตรวจสอบสนาม</button>
+  </div>
+</a>
+
+
+</div>
+
+</body>
+</html>
